@@ -25,7 +25,7 @@ SECRET_KEY = 't^9g6iljs8#r4^f=z7k*(inp-$9skpvrbw%1au4=&gyy&l^zs!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['test-django-2.web.cern.ch']
 
 
 # Application definition

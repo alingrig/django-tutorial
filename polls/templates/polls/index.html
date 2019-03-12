@@ -1,6 +1,17 @@
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
 
+{% load socialaccount %}
+
+<h1>Django Allauth Tutorial</h1>
+{% if user.is_authenticated %}
+<p>Welcome {{ user.username }} !!!</p>
+{% else %}
+<a href="{% provider_login_url 'cern' %}">Sign Up CERN</a>
+<a href="{% provider_login_url 'github' %}">Sign Up Github</a>
+{% endif %}
+
+
 {% if latest_questions %}
     <ul>
     {% for question in latest_questions %}
